@@ -15,3 +15,18 @@ resource "aws_subnet" "test_public_subnet" {
     }
   
 }
+
+resource "aws_subnet" "test-private-subnet" {
+    vpc_id = aws_vpc.testVPC.id
+    cidr_block = "10.0.10.0/24"
+
+    tags = {
+      Name ="private-subnet-2a"
+    }
+  
+}
+
+resource "aws_internet_gateway" "test-igw" {
+    
+  
+}
